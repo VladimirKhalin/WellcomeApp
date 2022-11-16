@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
@@ -15,16 +15,26 @@ class ViewController: UIViewController {
     let realUserName = "Andrey"
     let realPassword = "qwert"
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.userName = userNameTF.text ?? ""
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        userNameTF.text = ""
+        passwordTF.text = ""
     }
     
     @IBAction func logInButtonAction() {
         
         if userNameTF.text == realUserName && passwordTF.text == realPassword {
-           
-            print("Имия и пароль совпадаеют")
+        // Вот на этом месте ступор. Проверка прошла, Сигвэй переводит на следующий экран.
+        // Хотя тут ничего нет )))
             
         } else {
             let title = "Invalid login or password"

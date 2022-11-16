@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WellcomeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="WellcomeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,21 +44,22 @@
                                 </state>
                                 <connections>
                                     <action selector="logInButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="NaA-Cm-Ab6"/>
+                                    <segue destination="Wps-HY-Cku" kind="show" id="vU0-Ky-zm2"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="2Ab-dK-I4s">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2Ab-dK-I4s">
                                 <rect key="frame" x="16" y="380" width="382" height="31"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Voc-Gc-u9P">
-                                        <rect key="frame" x="0.0" y="0.0" width="177.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="149.5" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Forgot user Name?"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Forgot User Name?"/>
                                         <connections>
                                             <action selector="forgotUserNameButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="uLt-9o-zRz"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0i-Zx-F6g">
-                                        <rect key="frame" x="207.5" y="0.0" width="174.5" height="31"/>
+                                        <rect key="frame" x="242.5" y="0.0" width="139.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot password?"/>
                                         <connections>
@@ -94,10 +95,79 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="95.758928571428569"/>
         </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="rmE-9y-HVp">
+            <objects>
+                <viewController id="Wps-HY-Cku" customClass="WelcomeViewController" customModule="WellcomeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tGx-pw-cW2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmZ-wh-4ME">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYV-sJ-QEq">
+                                <rect key="frame" x="159.5" y="745" width="95" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Log out">
+                                    <color key="titleColor" systemColor="tintColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="logInButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="DCP-fo-GdH"/>
+                                    <action selector="logOutButtonAction" destination="Wps-HY-Cku" eventType="touchUpInside" id="Itx-f1-OHd"/>
+                                    <segue destination="mZN-SR-78o" kind="unwind" unwindAction="unwindFor:" id="abH-eg-bZw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Il-C6-Pk3">
+                                <rect key="frame" x="16" y="144" width="382" height="35"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atf-uz-Exw">
+                                <rect key="frame" x="169" y="209" width="76" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="T5v-5P-E8M"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7Il-C6-Pk3" firstAttribute="leading" secondItem="T5v-5P-E8M" secondAttribute="leading" constant="16" id="1H0-TY-mVh"/>
+                            <constraint firstItem="T5v-5P-E8M" firstAttribute="bottom" secondItem="CYV-sJ-QEq" secondAttribute="bottom" constant="50" id="AWe-ub-e1z"/>
+                            <constraint firstItem="atf-uz-Exw" firstAttribute="centerX" secondItem="tGx-pw-cW2" secondAttribute="centerX" id="BZe-L6-fWf"/>
+                            <constraint firstItem="CYV-sJ-QEq" firstAttribute="centerX" secondItem="tGx-pw-cW2" secondAttribute="centerX" id="C9X-Au-EXJ"/>
+                            <constraint firstAttribute="bottom" secondItem="gmZ-wh-4ME" secondAttribute="bottom" id="NC6-qj-4En"/>
+                            <constraint firstItem="7Il-C6-Pk3" firstAttribute="top" secondItem="T5v-5P-E8M" secondAttribute="top" constant="100" id="O8Q-0B-6h2"/>
+                            <constraint firstItem="atf-uz-Exw" firstAttribute="top" secondItem="7Il-C6-Pk3" secondAttribute="bottom" constant="30" id="YMt-pM-iZa"/>
+                            <constraint firstItem="gmZ-wh-4ME" firstAttribute="trailing" secondItem="T5v-5P-E8M" secondAttribute="trailing" id="gGw-Nn-ga8"/>
+                            <constraint firstItem="gmZ-wh-4ME" firstAttribute="top" secondItem="tGx-pw-cW2" secondAttribute="top" id="ib5-j7-zw1"/>
+                            <constraint firstItem="T5v-5P-E8M" firstAttribute="trailing" secondItem="7Il-C6-Pk3" secondAttribute="trailing" constant="16" id="mUz-8S-gYi"/>
+                            <constraint firstItem="gmZ-wh-4ME" firstAttribute="leading" secondItem="T5v-5P-E8M" secondAttribute="leading" id="ydt-yq-yzy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="I3F-Lz-Klg"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="gmZ-wh-4ME" id="6iL-W1-b6L"/>
+                        <outlet property="emojiLabel" destination="atf-uz-Exw" id="dQu-Z0-AoU"/>
+                        <outlet property="welcomeUserLabel" destination="7Il-C6-Pk3" id="jns-UA-MZT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ufq-x5-cHY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="mZN-SR-78o" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="917.39130434782612" y="92.410714285714278"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
