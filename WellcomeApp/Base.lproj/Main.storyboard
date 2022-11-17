@@ -98,26 +98,24 @@
         <!--Welcome View Controller-->
         <scene sceneID="rmE-9y-HVp">
             <objects>
-                <viewController id="Wps-HY-Cku" customClass="WelcomeViewController" customModule="WellcomeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Wps-HY-Cku" customClass="WelcomeViewController" customModule="WellcomeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tGx-pw-cW2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmZ-wh-4ME">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemGray3Color"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYV-sJ-QEq">
-                                <rect key="frame" x="159.5" y="745" width="95" height="47"/>
+                                <rect key="frame" x="159.5" y="765" width="95" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log out">
                                     <color key="titleColor" systemColor="tintColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="logInButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="DCP-fo-GdH"/>
-                                    <action selector="logOutButtonAction" destination="Wps-HY-Cku" eventType="touchUpInside" id="Itx-f1-OHd"/>
-                                    <segue destination="mZN-SR-78o" kind="unwind" unwindAction="unwindFor:" id="abH-eg-bZw"/>
+                                    <segue destination="mZN-SR-78o" kind="unwind" unwindAction="unwindFor:" id="vtc-dD-gii"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Il-C6-Pk3">

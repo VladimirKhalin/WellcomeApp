@@ -15,16 +15,18 @@ class LoginViewController: UIViewController {
     let realUserName = "Andrey"
     let realPassword = "qwert"
     
+    // Убираем клавиатуру
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
-    
+    // Передача данных по сегвею (prepare)
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.userName = userNameTF.text ?? ""
     }
-    
+    // Передача данных по сегвею (unwind)
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         userNameTF.text = ""
         passwordTF.text = ""
@@ -32,11 +34,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func logInButtonAction() {
         
-        if userNameTF.text == realUserName && passwordTF.text == realPassword {
-        // Вот на этом месте ступор. Проверка прошла, Сигвэй переводит на следующий экран.
-        // Хотя тут ничего нет )))
-            
-        } else {
+        if userNameTF.text != realUserName || passwordTF.text != realPassword {
             let title = "Invalid login or password"
             let message = "Please, enter correct login and password"
             

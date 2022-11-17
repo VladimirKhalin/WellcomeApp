@@ -31,8 +31,5 @@ class WelcomeViewController: UIViewController {
         emojiLabel.text = "💪"
     }
     
-    @IBAction func logOutButtonAction() {
-        // Тут тоже волшебство. Удаляю этот Акшен и фатал.
-        // С ним все работает.
-    }
+
 }
