@@ -6,8 +6,8 @@
 //
 
 import UIKit
-
-class LoginViewController: UIViewController {
+// Не забываем про final
+final class LoginViewController: UIViewController {
     
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
@@ -15,14 +15,13 @@ class LoginViewController: UIViewController {
     let realUserName = "Andrey"
     let realPassword = "qwert"
     
-    // Убираем клавиатуру
+    // Убираем клавиатуру (Применили ко всему view но можно к конкретному текст полю)
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
         view.endEditing(true)
     }
     // Передача данных по сегвею (prepare)
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.userName = userNameTF.text ?? ""
     }
@@ -39,6 +38,11 @@ class LoginViewController: UIViewController {
             let message = "Please, enter correct login and password"
             
             sendAlertMessage(title: title, message: message)
+        }
+        // Необязательн, но можно запустить сигвей самостоятельно из любого места
+        // openWelcomeVC - название cигвея в настройках idenrifier
+        else {
+            performSegue(withIdentifier: "openWelcomeVC", sender: nil)
         }
     }
     
