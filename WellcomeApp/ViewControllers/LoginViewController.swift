@@ -6,13 +6,13 @@
 //
 
 import UIKit
-// Не забываем про final
+
 final class LoginViewController: UIViewController {
     
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    let realUserName = "A"
+    let realUserName = "Vladimir Khalin"
     let realPassword = "q"
     
     // Убираем клавиатуру (Применили ко всему view но можно к конкретному текст полю)
@@ -22,10 +22,14 @@ final class LoginViewController: UIViewController {
     }
     // Передача данных по сегвею (prepare)
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = userNameTF.text ?? ""
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let welcomeVC = tabBarController.viewControllers?[0] as? WelcomeViewController else { return }
+        welcomeVC.userName = realUserName
+        guard let infoNC = tabBarController.viewControllers?[1] as? UINavigationController else { return }
+        guard let viewInfo = infoNC.viewControllers.first as? InfoViewController else { return }
+        viewInfo.title = realUserName
     }
-    // Передача данных по сегвею (unwind)
+    // Передача данных по сегвею обратка (unwind)
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         userNameTF.text = ""
         passwordTF.text = ""
@@ -39,12 +43,8 @@ final class LoginViewController: UIViewController {
             
             sendAlertMessage(title: title, message: message)
         }
-        // Необязательн, но можно запустить сигвей самостоятельно из любого места
-        // openWelcomeVC - название cигвея в настройках idenrifier
-        else {
-            performSegue(withIdentifier: "openWelcomeVC", sender: nil)
-        }
     }
+    // performSegue(withIdentifier: "openWelcomeVC", sender: nil)
     
     @IBAction func forgotUserNameButtonAction() {
         

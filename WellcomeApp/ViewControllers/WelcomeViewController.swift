@@ -10,10 +10,9 @@ import UIKit
 final class WelcomeViewController: UIViewController {
     @IBOutlet var welcomeUserLabel: UILabel!
     @IBOutlet var backgroundView: UIView!
-    @IBOutlet var emojiLabel: UILabel!
     
     var userName: String = ""
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,11 +24,6 @@ final class WelcomeViewController: UIViewController {
             UIColor.systemMint.cgColor,
             UIColor.systemRed.cgColor
         ]
-        
         backgroundView.layer.addSublayer(gradientLayer)
-        
-        emojiLabel.text = "💪"
     }
-    
-
 }
