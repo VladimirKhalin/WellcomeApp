@@ -12,8 +12,8 @@ final class LoginViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    let realUserName = "Andrey"
-    let realPassword = "qwert"
+    let realUserName = "A"
+    let realPassword = "q"
     
     // Убираем клавиатуру (Применили ко всему view но можно к конкретному текст полю)
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

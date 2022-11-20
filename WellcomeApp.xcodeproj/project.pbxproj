@@ -58,16 +58,48 @@
 		126DE1562924DE5500F57674 /* WellcomeApp */ = {
 			isa = PBXGroup;
 			children = (
-				126DE1572924DE5500F57674 /* AppDelegate.swift */,
-				126DE1592924DE5500F57674 /* SceneDelegate.swift */,
-				126DE15B2924DE5500F57674 /* LoginViewController.swift */,
-				126DE16B2924F45000F57674 /* WelcomeViewController.swift */,
-				126DE15D2924DE5500F57674 /* Main.storyboard */,
-				126DE1602924DE5A00F57674 /* Assets.xcassets */,
-				126DE1622924DE5A00F57674 /* LaunchScreen.storyboard */,
-				126DE1652924DE5A00F57674 /* Info.plist */,
+				126DE16E292A082900F57674 /* DelegateFiles */,
+				126DE16D292A07FE00F57674 /* ViewControllers */,
+				126DE16F292A089400F57674 /* Screens */,
+				126DE170292A08A700F57674 /* Tools */,
 			);
 			path = WellcomeApp;
+			sourceTree = "<group>";
+		};
+		126DE16D292A07FE00F57674 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				126DE15B2924DE5500F57674 /* LoginViewController.swift */,
+				126DE16B2924F45000F57674 /* WelcomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		126DE16E292A082900F57674 /* DelegateFiles */ = {
+			isa = PBXGroup;
+			children = (
+				126DE1572924DE5500F57674 /* AppDelegate.swift */,
+				126DE1592924DE5500F57674 /* SceneDelegate.swift */,
+			);
+			path = DelegateFiles;
+			sourceTree = "<group>";
+		};
+		126DE16F292A089400F57674 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				126DE15D2924DE5500F57674 /* Main.storyboard */,
+				126DE1622924DE5A00F57674 /* LaunchScreen.storyboard */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		126DE170292A08A700F57674 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				126DE1602924DE5A00F57674 /* Assets.xcassets */,
+				126DE1652924DE5A00F57674 /* Info.plist */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,7 +325,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QX7375AQZ9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WellcomeApp/Info.plist;
+				INFOPLIST_FILE = WellcomeApp/Tools/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -322,7 +354,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QX7375AQZ9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WellcomeApp/Info.plist;
+				INFOPLIST_FILE = WellcomeApp/Tools/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

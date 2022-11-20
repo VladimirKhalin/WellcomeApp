@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+final class WelcomeViewController: UIViewController {
     @IBOutlet var welcomeUserLabel: UILabel!
     @IBOutlet var backgroundView: UIView!
     @IBOutlet var emojiLabel: UILabel!
