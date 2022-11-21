@@ -11,9 +11,12 @@ class MorInfoViewController: UIViewController {
     @IBOutlet var morInfoImage: UIImageView!
     @IBOutlet var morInfo: UILabel!
     
+    var currentImage: UIImage = UIImage(named: "emptyPhoto")!
+    var currentMorInfo = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        morInfoImage.image = personOne.morInfoPhoto
-        morInfo.text = personOne.morInfo
+        morInfoImage.image = currentImage
+        morInfo.text = currentMorInfo
     }
 }

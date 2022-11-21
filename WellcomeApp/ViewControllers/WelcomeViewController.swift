@@ -11,7 +11,7 @@ final class WelcomeViewController: UIViewController {
     @IBOutlet var welcomeUserLabel: UILabel!
     @IBOutlet var backgroundView: UIView!
     
-    var userName: String = ""
+    var userName = ""
    
     override func viewDidLoad() {
         super.viewDidLoad()

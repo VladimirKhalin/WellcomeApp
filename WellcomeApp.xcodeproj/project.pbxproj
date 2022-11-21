@@ -15,7 +15,6 @@
 		126DE1612924DE5A00F57674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 126DE1602924DE5A00F57674 /* Assets.xcassets */; };
 		126DE1642924DE5A00F57674 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 126DE1622924DE5A00F57674 /* LaunchScreen.storyboard */; };
 		126DE16C2924F45000F57674 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126DE16B2924F45000F57674 /* WelcomeViewController.swift */; };
-		128FD592292AA7DA008032DD /* CoreBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128FD591292AA7DA008032DD /* CoreBase.swift */; };
 		129165F8292A17B300AB8B0D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129165F7292A17B300AB8B0D /* InfoViewController.swift */; };
 		129165FA292A17D800AB8B0D /* MorInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129165F9292A17D800AB8B0D /* MorInfoViewController.swift */; };
 /* End PBXBuildFile section */
@@ -31,7 +30,6 @@
 		126DE1632924DE5A00F57674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		126DE1652924DE5A00F57674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		126DE16B2924F45000F57674 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		128FD591292AA7DA008032DD /* CoreBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreBase.swift; path = WellcomeApp/Base/CoreBase.swift; sourceTree = SOURCE_ROOT; };
 		129165F7292A17B300AB8B0D /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		129165F9292A17D800AB8B0D /* MorInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,7 +72,6 @@
 		126DE1562924DE5500F57674 /* WellcomeApp */ = {
 			isa = PBXGroup;
 			children = (
-				128FD590292AA72E008032DD /* UserBase */,
 				1256BC39292A6CA3003EA3F2 /* Models */,
 				126DE16E292A082900F57674 /* DelegateFiles */,
 				126DE16D292A07FE00F57674 /* ViewControllers */,
@@ -120,14 +117,6 @@
 				126DE1652924DE5A00F57674 /* Info.plist */,
 			);
 			path = Tools;
-			sourceTree = "<group>";
-		};
-		128FD590292AA72E008032DD /* UserBase */ = {
-			isa = PBXGroup;
-			children = (
-				128FD591292AA7DA008032DD /* CoreBase.swift */,
-			);
-			path = UserBase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,7 +195,6 @@
 				126DE16C2924F45000F57674 /* WelcomeViewController.swift in Sources */,
 				126DE1582924DE5500F57674 /* AppDelegate.swift in Sources */,
 				126DE15A2924DE5500F57674 /* SceneDelegate.swift in Sources */,
-				128FD592292AA7DA008032DD /* CoreBase.swift in Sources */,
 				129165F8292A17B300AB8B0D /* InfoViewController.swift in Sources */,
 				129165FA292A17D800AB8B0D /* MorInfoViewController.swift in Sources */,
 			);

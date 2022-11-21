@@ -172,7 +172,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Mor info"/>
                                 <connections>
-                                    <segue destination="m0B-YF-Hg5" kind="show" id="VYh-8p-Wdx"/>
+                                    <segue destination="m0B-YF-Hg5" kind="show" identifier="morInfo" id="VYh-8p-Wdx"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0iA-Js-Sod">
@@ -281,7 +281,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="User" id="mwg-KR-h0D"/>
                     <connections>
-                        <outlet property="dayOfBirthday" destination="kiF-uK-K7E" id="UXd-KJ-ygi"/>
+                        <outlet property="birthday" destination="kiF-uK-K7E" id="UXd-KJ-ygi"/>
                         <outlet property="hobby" destination="57B-19-Zne" id="HCH-1W-i2L"/>
                         <outlet property="info" destination="a08-GC-KDC" id="VXl-Ys-QN4"/>
                         <outlet property="sex" destination="ewa-iY-7Uy" id="0EK-aG-Tzj"/>
